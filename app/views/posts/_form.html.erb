@@ -1,9 +1,7 @@
-<%= form_for @post do |f| %>
+<%= form_for :post, @post, :url => post_path, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :image_url %><br />
-    <%= f.text_field :image_url %>
-  </p>
+  
+  <%= f.file_field :avatar %>
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
