@@ -7,7 +7,7 @@
     <% if params[:action] == "index" %>
       <a href="<%= post_url(post) %>"><img class="post_image" src="<%= post.image.url(:medium) %>" alt="<%= post.title %>" width="550"/></a>
     <% else %>
-      <img class="post_image" src="<%= post.image.url(:medium) %>" alt="<%= post.title %>" />
+      <img class="post_image" src="<%= post.image.url(:medium) %>" alt="<%= post.title %>" width="550" />
     <% end %>
     <div class="post_content">
       <h3><%= link_to post.title, post_url(post) %></h3>
