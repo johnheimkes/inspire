@@ -87,6 +87,7 @@ a#connect {
 #content {
 	float: left;
 	width: 650px;
+	margin-bottom: 100px;
 }
 
 #posts {
@@ -212,4 +213,5 @@ a#connect {
 	clear: both;
 	font-size: 12px;
 	margin-bottom: 50px;
+	border-top: 1px solid #e1e1e1;
 }

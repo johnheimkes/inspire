@@ -1,0 +1,14 @@
+<div id="sidebar">
+  <h2>Random Posts</h2>
+  <ul>
+    <% for post in posts %>
+      <li>
+        <a href="<%= post_url(post) %>">
+          <img class="random_image" src="<%= post.image.url(:thumb) %>" alt="<%= post.title %>" width="50" height="50" />
+          <h4 class="title"><%= post.title %></h4>
+          <h5 class="author">@dane_ray</h5>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>

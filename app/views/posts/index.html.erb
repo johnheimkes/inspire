@@ -1,23 +1,8 @@
 <% title "Posts" %>
 
-<table>
-  <tr>
-    <th>Image Url</th>
-    <th>Title</th>
-    <th>Body</th>
-    <th>User</th>
-  </tr>
-  <% for post in @posts %>
-    <tr>
-      <td><%= post.image_url %></td>
-      <td><%= post.title %></td>
-      <td><%= post.body %></td>
-      <td><%= post.user_id %></td>
-      <td><%= link_to "Show", post %></td>
-      <td><%= link_to "Edit", edit_post_path(post) %></td>
-      <td><%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
+<% for post in @posts %>
+  <%= render :partial => "post", :locals => { :post => post } %>
+<% end %>
 
-<p><%= link_to "New Post", new_post_path %></p>
+
+<p><%= link_to "Add Item", new_post_path %></p>

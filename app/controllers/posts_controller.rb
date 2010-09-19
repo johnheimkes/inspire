@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  
+  before_filter :get_random_posts
   def index
     @posts = Post.all
   end
@@ -42,3 +44,11 @@ class PostsController < ApplicationController
     redirect_to posts_url
   end
 end
+
+private
+
+def get_random_posts
+  @random = Post.all
+end
+
+
