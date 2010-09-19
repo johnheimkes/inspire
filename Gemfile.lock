@@ -76,4 +76,4 @@ DEPENDENCIES
   paperclip
   rails (= 3.0.0)
   sqlite3-ruby
-  will_paginate
+  will_paginate (~> 3.0.pre2)

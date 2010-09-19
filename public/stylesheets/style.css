@@ -161,6 +161,7 @@ a#connect {
 	float: left;
 	margin-left: 25px;
 	width: 250px;
+	margin-bottom: 50px;
 }
 
 #sidebar h2 {
@@ -196,8 +197,19 @@ a#connect {
 }
 
 
+#static_content {
+  width: 450px;
+}
+#static_content h2 {
+  font-size: 32px;
+  font-family: "Archer", Rockwell;
+  margin-bottom: 20px;
+}
 
-
+#static_content p {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 
 
 

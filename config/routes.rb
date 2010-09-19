@@ -1,4 +1,8 @@
 Inspirempls::Application.routes.draw do
+  get "site/submit"
+  get "site/about"
+  get "site/connect"
+
   resources :posts
 
   # The priority is based upon order of creation:
