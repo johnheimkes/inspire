@@ -5,7 +5,7 @@
       <span class="day"><%= post.created_at.strftime("%d") %></span>
     </div>
     <% if params[:action] == "index" %>
-      <a href="<%= post_url(post) %>"><img class="post_image" src="<%= post.image.url(:medium) %>" alt="<%= post.title %>" /></a>
+      <a href="<%= post_url(post) %>"><img class="post_image" src="<%= post.image.url(:medium) %>" alt="<%= post.title %>" width="550"/></a>
     <% else %>
       <img class="post_image" src="<%= post.image.url(:medium) %>" alt="<%= post.title %>" />
     <% end %>
