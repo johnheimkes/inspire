@@ -1,4 +1,6 @@
 Inspirempls::Application.routes.draw do
+  devise_for :users
+
   get "site/submit"
   get "site/about"
   get "site/connect"

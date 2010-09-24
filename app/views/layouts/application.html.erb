@@ -6,16 +6,24 @@
     <meta name="Robots" content="index,all" />
     <meta name="Keywords" content="Inspire MPLS, inspire, minneapolis, minnesota, inspiration, graphic design, design, web design" />
     <meta name="Description" content="InspireMPLS :: The place to share inspiration with and meet other creatives." />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-    <script src="" type="text/javascript" charset="utf-8"></script>
     
     <%= stylesheet_link_tag "style" %>
-    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" %>
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js", "http://connect.facebook.net/en_US/all.js" %>
     <%= csrf_meta_tag %>
     
   </head>
   <body>
     <div id="wrapper">
+      <div id="authentication">
+        <span class="facebook">
+          <%- if user_signed_in? %>
+            Logged in as <em><%= current_user.name %></em>. Not you?
+            <%= link_to 'Sign out', destroy_user_session_path %>
+          <%- else %>
+            <%= link_to 'Sign in', user_oauth_authorize_url(:facebook), :class => "facebook_login_btn" %>
+          <%- end %>
+        </span>
+      </div>
       <div id="header">
         <h1><a href="/">InspireMPLS</a></h1>
         <ul id="nav">
@@ -28,10 +36,14 @@
       <div id="content">
         <%= yield %>
       </div>
-      <%= render :partial => "layouts/sidebar", :locals => { :posts => @random } %>
+      <% if @random %>
+        <%= render :partial => "layouts/sidebar", :locals => { :posts => @random } %>
+      <% end %>
       <div id="footer">
         <p class="copy">&copy; Copyright 2010 &mdash; a <a href="#">MarkupIsArt</a> Project</p>
       </div>
     </div>
+    
+    
   </body>
 </html>

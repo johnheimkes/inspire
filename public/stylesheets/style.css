@@ -1,3 +1,5 @@
+/* @override http://looce.com:3000/stylesheets/style.css */
+
 @import url("reset.css");
 
 body {
@@ -22,7 +24,9 @@ a:hover {
 }
 #wrapper {
 	width: 960px;
-	margin: 20px auto 0;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
 }
 
 #header {
@@ -38,6 +42,22 @@ h1 a{
     text-indent: -9999px;
     display: block;
     float: left;
+}
+
+#authentication {
+	float: right;
+	border: 1px solid #e1e1e1;
+	padding: 25px;
+	font-size: 12px;
+}
+
+a.facebook_login_btn {
+	background: url(../images/fb_login_btn.png) top left no-repeat;
+	float: left;
+	display: block;
+	width: 154px;
+	height: 22px;
+	text-indent: -9999px;
 }
 
 ul#nav {
