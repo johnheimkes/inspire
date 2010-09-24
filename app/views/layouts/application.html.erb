@@ -17,10 +17,12 @@
       <div id="authentication">
         <span class="facebook">
           <%- if user_signed_in? %>
-            Logged in as <em><%= current_user.name %></em>. Not you?
+            Logged in as <em><%= current_user.name ? current_user.name : current_user.twitter_handle %></em>. Not you?
             <%= link_to 'Sign out', destroy_user_session_path %>
           <%- else %>
-            <%= link_to 'Sign in', user_oauth_authorize_url(:facebook), :class => "facebook_login_btn" %>
+          
+            <% #link_to 'Sign in', user_oauth_authorize_url(:facebook), :class => "facebook_login_btn" %>
+            <%= link_to 'Sign in', "/user/sign_in/twitter", :class => "twitter_login_btn" %>
           <%- end %>
         </span>
       </div>
