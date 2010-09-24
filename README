@@ -1,1 +1,17 @@
 InspireMPLS
+
+
+To get running you must do the following:
+
+1. run bundle install
+2. run rake db:migrate
+3. run rake db:seed
+4. Set your s3 credentials as a bash variable
+
+On Mac OS edit ~/.bash_login
+On Linux edit ~/.bashrc
+
+Add lines with your AWS keys like so:
+
+export AWS_ACCESS_KEY_ID="15BBSFAF2$T94J0TC582"
+export AWS_SECRET_ACCESS_KEY="aSF3rehfE#Fewoubh3fQFRAIRfh3ur3QRAfrAFEWfjaefa"
