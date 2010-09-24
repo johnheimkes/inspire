@@ -7,10 +7,8 @@ class User < ActiveRecord::Base
   #            since it's email and password is blank.
   #            :validatable checks only email and password so it's safe to remove
 
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable, :lockable, :timeoutable and :oauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :twitter_oauth
+         :recoverable, :rememberable, :trackable, :oauthable, :twitter_oauth
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :gender, :bio, :name
