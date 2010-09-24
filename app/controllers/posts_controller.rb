@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   
   before_filter :get_random_posts
   def index
-    @posts = Post.all(:order => "id DESC")
     
+    @posts = Post.paginate :page => params[:page], :order => 'created_at DESC'
   end
   
   def show

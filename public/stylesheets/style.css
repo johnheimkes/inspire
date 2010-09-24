@@ -155,8 +155,6 @@ a#connect {
 
 
 
-
-
 #sidebar {
 	float: left;
 	margin-left: 25px;
@@ -226,4 +224,64 @@ a#connect {
 	font-size: 12px;
 	margin-bottom: 50px;
 	border-top: 1px solid #e1e1e1;
+}
+
+
+
+
+p.add_insp {
+  float: left;
+  width: 260px;
+}
+
+.pagination {
+  display: block;
+  float: right;
+  width: 225px;
+}
+
+.pagination em {
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: underline;
+  color: #666;
+}
+
+.pagination a, .pagination em {
+  margin: 0 4px;
+  font-weight: bold;
+}
+
+.pagination a.next_page, .pagination a.previous_page {
+  color: #63AD91;
+  font-weight: normal;
+}
+
+.pagination a {
+  text-decoration: none;
+}
+
+.pagination a:hover {
+  text-decoration: underline;
+}
+
+.pagination .disabled {
+  color: #C3C3C3 !important;
+}
+
+.add_insp a {
+  font-family: "Archer", Rockwell;
+  font-size: 16px;
+  font-style: italic;
+  padding: 5px 8px 3px 8px;
+  text-decoration: none !important;
+  background: #88c5ae;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #333 !important;
+}
+
+.add_insp a:hover {
+  text-decoration: underline !important;
 }
