@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :posts
+  
   # To use devise-twitter don't forget to include the :twitter_oauth module:
   # e.g. devise :database_authenticatable, ... , :twitter_oauth
 
@@ -32,5 +34,8 @@ class User < ActiveRecord::Base
     end
   end
   
+  def get_name
+    self.name ? self.name : self.twitter_handle
+  end
   
 end

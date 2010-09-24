@@ -5,15 +5,15 @@
       <span class="day"><%= post.created_at.strftime("%d") %></span>
     </div>
     <% if params[:action] == "index" %>
-      <a href="<%= post_url(post) %>"><img class="post_image" src="<%= post.image.url(:medium) %>" alt="<%= post.title %>" width="550"/></a>
+      <a href="<%= post_url(post) %>"><img class="post_image" src="<%= post.image.url(:medium) %>" alt="<%= post.title %>"/></a>
     <% else %>
-      <img class="post_image" src="<%= post.image.url(:medium) %>" alt="<%= post.title %>" width="550" />
+      <img class="post_image" src="<%= post.image.url(:medium) %>" alt="<%= post.title %>" />
     <% end %>
     <div class="post_content">
       <h3><%= link_to post.title, post_url(post) %></h3>
       <%= post.body %>
       <div class="meta">
-        <span class="author">Posted by <a href="#">@dane_ray</a></span>
+        <span class="author">Posted by <a href="#"><%= post.user.get_name %></a></span>
       </div>
     </div>
   </div>

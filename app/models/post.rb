@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  belongs_to :user
   # attr_accessible :image_url, :title, :body, :user_id
   
   cattr_reader :per_page

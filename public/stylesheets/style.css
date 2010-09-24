@@ -53,11 +53,27 @@ h1 a{
 
 a.facebook_login_btn {
 	background: url(../images/fb_login_btn.png) top left no-repeat;
+}
+
+a.twitter_login_btn {
+	background: url(../images/twitter_login_btn.png) top left no-repeat;
+}
+
+a.facebook_login_btn, a.twitter_login_btn {
+	
 	float: left;
 	display: block;
 	width: 154px;
 	height: 22px;
 	text-indent: -9999px;
+}
+
+a.facebook_login_btn:hover, a.twitter_login_btn:hover {
+	background-position: 0 -24px;
+}
+
+a.facebook_login_btn:active, a.twitter_login_btn:active {
+	background-position: 0 -48px;
 }
 
 ul#nav {
@@ -140,6 +156,7 @@ a#connect {
 	font-style: italic;
 	font-weight: bold;
 	margin-top: -2px;
+	text-transform: uppercase;
 }
 
 .date .day {
@@ -148,6 +165,9 @@ a#connect {
 	display: block;
 }
 
+.post_image {
+	max-width: 550px;
+}
 
 .post_content {
 	margin-left: 70px;
@@ -249,11 +269,6 @@ a#connect {
 
 
 
-p.add_insp {
-  float: left;
-  width: 260px;
-}
-
 .pagination {
   display: block;
   float: right;
@@ -289,19 +304,20 @@ p.add_insp {
   color: #C3C3C3 !important;
 }
 
-.add_insp a {
+a.add_btn {
   font-family: "Archer", Rockwell;
   font-size: 16px;
   font-style: italic;
-  padding: 5px 8px 3px 8px;
-  text-decoration: none !important;
   background: #88c5ae;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  color: #333 !important;
+  color: #000;
+  text-decoration: none;
+	padding: 10px;
 }
 
-.add_insp a:hover {
-  text-decoration: underline !important;
+a.add_btn:hover {
+	color: #444;
+	background: #abd9c8;
 }
