@@ -4,5 +4,5 @@
   <%= render :partial => "post", :locals => { :post => post } %>
 <% end %>
 
-
-<p><%= link_to "Add Item", new_post_path %></p>
+<p class="add_insp"><%= link_to "Add Inspiration", new_post_path %></p>
+<%= will_paginate @posts %>
