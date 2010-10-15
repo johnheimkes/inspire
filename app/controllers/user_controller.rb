@@ -1,7 +1,7 @@
 class UserController < ApplicationController
   
   def index
-    @posts = Post.paginate :page => params[:page], :order => 'created_at DESC', :where => ['user_id' = ]
+    @posts = Post.paginate :page => params[:page], :order => 'created_at DESC'
   end
 
 end
