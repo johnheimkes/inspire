@@ -1,0 +1,10 @@
+<span class="facebook">
+  <%- if user_signed_in? %>
+    Logged in as <em><%= current_user.get_name %></em>. Not you?
+    <%= link_to 'Sign out', destroy_user_session_path %>
+  <%- else %>
+  
+    <%= link_to 'Sign in', user_oauth_authorize_url(:facebook), :class => "facebook_login_btn" %>
+    <%= link_to 'Sign in', user_sign_in_twitter_url, :class => "twitter_login_btn" %>
+  <%- end %>
+</span>
