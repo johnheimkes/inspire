@@ -266,37 +266,36 @@ a#connect {
 }
 
 #sidebar h2 {
-	font-size: 24px;
+	background: #9ad0bc url(../images/bar_tail.png) no-repeat left;
+	font-size: 16px;
 	font-family: "Archer", Rockwell;
-	margin-bottom: 15px;
+	padding: 5px 5px 5px 20px;
+	color: #2e2e2e;
+	margin-bottom: 5px;
+}
+
+#sidebar h2 span {
+	font-weight: bold;
 }
 
 #sidebar li {
 	float: left;
-	width: 100%;
+	clear: both;
 }
-#sidebar li a {
+
+#tags li a {
+	background: #e0e0e0;
+	color: #2e2e2e;
 	text-decoration: none;
-	height: 50px;
+	padding: 5px 5px 5px 10px;
 	display: block;
-	padding-bottom: 10px;
-	border-bottom: 1px solid #e1e1e1;
-	padding-top: 10px;
+	margin-bottom: 5px;
+	margin-left: 11px;
 }
 
-#sidebar li a:hover {
-	background: #f8f8f8;
+#tags li a:hover {
+	background: #f0f0f0;
 }
-
-#sidebar li img {
-	float: left;
-	margin-right: 20px;
-}
-
-#sidebar li .title {
-	padding-top: 6px;
-}
-
 
 #static_content {
   width: 450px;

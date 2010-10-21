@@ -8,7 +8,7 @@
     <meta name="Description" content="InspireMPLS :: The place to share inspiration with and meet other creatives." />
     
     <%= stylesheet_link_tag "style" %>
-    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js", "http://connect.facebook.net/en_US/all.js" %>
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js", "http://connect.facebook.net/en_US/all.js", 'application' %>
     <%= csrf_meta_tag %>
     
   </head>
@@ -33,8 +33,8 @@
       <div id="content">
         <%= yield %>
       </div>
-      <% if @random %>
-        <%= render :partial => "layouts/sidebar", :locals => { :posts => @random } %>
+      <% if @tags %>
+        <%= render :partial => "layouts/sidebar", :locals => { :posts => @tags } %>
       <% end %>
       <div id="footer">
         <p class="copy">&copy; Copyright 2010 &mdash; a <a href="#">MarkupIsArt</a> Project</p>
