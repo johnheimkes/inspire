@@ -1,4 +1,5 @@
 Inspirempls::Application.routes.draw do
+
   get "splash/index"
 
   get "user/index"
@@ -16,6 +17,9 @@ Inspirempls::Application.routes.draw do
   get "site/connect"
 
   resources :posts
+
+  match "tag/:tag" => 'tag#show'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

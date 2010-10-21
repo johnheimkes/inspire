@@ -1,0 +1,8 @@
+<% title "Posts tagged with #{@tag}" %>
+
+<% for post in @posts %>
+  <%= render :partial => "/posts/post", :locals => { :post => post } %>
+<% end %>
+
+
+<%= link_to "Add Inspiration", new_post_path, :class => "add_btn" %>
