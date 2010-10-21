@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :user
-
+  acts_as_taggable
     
   # attr_accessible :image_url, :title, :body, :user_id
   
