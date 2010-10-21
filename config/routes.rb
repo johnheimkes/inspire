@@ -18,7 +18,8 @@ Inspirempls::Application.routes.draw do
 
   resources :posts
 
-  match "tag/:tag" => 'tag#show'
+  match 'tag/:tag', :to => 'tag#show'
+  
   
 
   # The priority is based upon order of creation:
