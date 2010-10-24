@@ -13,6 +13,9 @@ class SiteController < ApplicationController
     @post = Post.new
   end
 
+  def sign_in
+    render :layout => false
+  end
 end
 
 private

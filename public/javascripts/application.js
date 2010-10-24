@@ -1,3 +1,3 @@
 $(function(){
-  // foo
+  $('#search a').facebox() 
 })

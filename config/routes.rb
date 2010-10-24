@@ -15,7 +15,8 @@ Inspirempls::Application.routes.draw do
   get "site/submit"
   get "site/about"
   get "site/connect"
-
+  get "site/sign_in"
+  
   resources :posts
 
   match 'tag/:tag', :to => 'tag#show'

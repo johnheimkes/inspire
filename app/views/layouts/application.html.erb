@@ -7,8 +7,8 @@
     <meta name="Keywords" content="Inspire MPLS, inspire, minneapolis, minnesota, inspiration, graphic design, design, web design" />
     <meta name="Description" content="InspireMPLS :: The place to share inspiration with and meet other creatives." />
     
-    <%= stylesheet_link_tag "style" %>
-    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js", "http://connect.facebook.net/en_US/all.js", 'application' %>
+    <%= stylesheet_link_tag "style", 'facebox' %>
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js", "http://connect.facebook.net/en_US/all.js", 'facebox', 'application' %>
     <%= csrf_meta_tag %>
     
   </head>
@@ -17,7 +17,7 @@
       <div id="header">
         <h1><a href="/">InspireMPLS</a></h1>
         <div id="search">
-          <span><a href="#">Sign In</a> | </span>
+          <span> <%if current_user %> Signed in as <a href="#"><%= current_user.name %></a><% else %><a href="/site/sign_in.html" rel="facebox">Sign In</a> <% end %>| </span>
           <form action="?s=" method="get">
             <input name="s" type="text" value="search" />
             <input type="submit" value="GO" />
