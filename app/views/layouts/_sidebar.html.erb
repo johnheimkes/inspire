@@ -4,7 +4,7 @@
     <% tags = get_tag_width(@tags) %>
     
     <% for tag in tags %>
-      <li data-count="<%= tag["count"] %>" style="width: <%= tag["width"] %>%"><a href="#"><%= tag["name"] %></a></li>
+      <li data-count="<%= tag["count"] %>" style="width: <%= tag["width"] %>% !important;"><a href="#"><%= tag["name"] %></a></li>
     <% end %>
   </ul>
 </div>
