@@ -1,3 +1,4 @@
 $(function(){
-  $('#search a').facebox() 
+  $("#login_btns").hide();
+  $('#search a').facebox();
 })
