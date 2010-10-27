@@ -1,5 +1,7 @@
 Inspirempls::Application.routes.draw do
 
+  resources :authentications
+
   get "splash/index"
 
   get "user/index"
