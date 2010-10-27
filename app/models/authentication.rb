@@ -1,3 +1,3 @@
-class Authentication < ActiveRecord::Base
-  attr_accessible :user_id, :provider, :uid
+class Authentication < ActiveRecord::Base  
+  belongs_to :user  
 end
