@@ -64,14 +64,9 @@ ActiveRecord::Schema.define(:version => 20101027232011) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "twitter_handle"
-    t.string   "twitter_oauth_token"
-    t.string   "twitter_oauth_secret"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
-  add_index "users", ["twitter_handle"], :name => "index_users_on_twitter_handle", :unique => true
-  add_index "users", ["twitter_oauth_token", "twitter_oauth_secret"], :name => "index_users_on_twitter_oauth_token_and_twitter_oauth_secret"
 
 end

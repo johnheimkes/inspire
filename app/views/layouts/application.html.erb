@@ -25,8 +25,8 @@
               <%= link_to 'Sign out', destroy_user_session_path %>
             <%- else %>
 
-              <%= link_to 'Sign in', user_oauth_authorize_url(:facebook), :class => "facebook_login_btn" %>
-              <%= link_to 'Sign in', user_sign_in_twitter_url, :class => "twitter_login_btn" %>
+              <%= link_to 'Sign in', "/auth/facebook", :class => "facebook_login_btn" %>
+              <%= link_to 'Sign in', "/auth/twitter", :class => "twitter_login_btn" %>
             <%- end %>
           </span>
             
