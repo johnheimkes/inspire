@@ -21,7 +21,7 @@
           
           <span id="login_btns" class="facebook">
             <%- if user_signed_in? %>
-              Logged in as <em><%= current_user.get_name %></em>. Not you?
+              Logged in as <em><%= current_user.name %></em>. Not you?
               <%= link_to 'Sign out', destroy_user_session_path %>
             <%- else %>
 

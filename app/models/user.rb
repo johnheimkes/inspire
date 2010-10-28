@@ -11,8 +11,21 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   
   def apply_omniauth(omniauth)
-    self.email = omniauth['user_info']['email'] if email.blank?
-    authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
+    if omniauth['provider'] == "facebook"
+      self.email = omniauth['extra']['user_hash']['email'] if email.blank?
+      self.name = omniauth['extra']['user_hash']['name'] if name.blank?
+      self.username = omniauth['user_info']['nickname'] if username.blank?
+      self.bio = omniauth['extra']['user_hash']['bio'] if bio.blank?
+      
+      authentications.build( :provider => omniauth['provider'], :uid => omniauth['uid'])
+    else
+      self.email = omniauth['user_info']['email'] if email.blank?
+      self.name = omniauth['user_info']['name'] if name.blank?
+      self.username = omniauth['user_info']['nickname'] if username.blank?
+      self.bio = omniauth['user_info']['description'] if bio.blank?
+
+      authentications.build( :provider => omniauth['provider'], :uid => omniauth['uid'])
+    end
   end
   
   def password_required?
