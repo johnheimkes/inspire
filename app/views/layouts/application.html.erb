@@ -17,7 +17,7 @@
       <div id="header">
         <h1><a href="/">InspireMPLS</a></h1>
         <div id="search">
-          <span><%if current_user %> Signed in as <a href="#"><%= current_user.name %></a><% else %><a href="#login_btns" rel="facebox">Sign In</a> <% end %>| </span>
+          <span><%if current_user %> Signed in as <a href="#"><%= current_user.name %></a><span id="logout">(not you? <a href="/auth/sign_out">sign out</a>)</span><% else %><a href="#login_btns" rel="facebox">Sign In</a> <% end %>| </span>
           
           <span id="login_btns" class="facebook">
             <%- if user_signed_in? %>

@@ -28,9 +28,9 @@ class AuthenticationsController < ApplicationController
   end
   
   def destroy
-    @authentication = current_user.authentications.find(params[:id])
+    @authentication = current_user.authentications.last
     @authentication.destroy
-    flash[:notice] = "Successfully destroyed authentication."
+    flash[:notice] = "Successfully logged out."
     redirect_to authentications_url
   end
 end
