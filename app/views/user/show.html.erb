@@ -1,0 +1,11 @@
+<% title "Inspiration posted by #{@user.name}" %>
+
+<div class="user_card">
+  <img src="" alt="<%= @user.name %>" />
+  <h3><%= @user.name %></h3>
+  <h5><%= @user.posts.count %> inspirations</h5>
+</div>
+
+<% for post in @posts %>
+  <%= render :partial => "posts/post", :locals => { :post => post } %>
+<% end %>

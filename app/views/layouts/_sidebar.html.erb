@@ -1,5 +1,5 @@
 <div id="sidebar">
-  <h2><span>Popular</span> Tags</h2>
+  <h2><span><%= @current_controller == "posts" ? "Popular" : "User" %></span> Tags</h2>
   <ul id="tags">
     <% tags = get_tag_width(@tags) %>
     

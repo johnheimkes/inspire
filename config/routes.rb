@@ -5,6 +5,7 @@ Inspirempls::Application.routes.draw do
   devise_for :users, :controllers => { :registrations => 'registrations' }  
   resources :posts
   resources :authentications
+  resources :user
   
   get "splash/index"
   get "user/index"
