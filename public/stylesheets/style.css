@@ -441,8 +441,16 @@ a.add_btn:hover {
 	width: 75px;
 }
 
+span#logout {
+	font-size: 11px;
+	float: right;
+	margin-left: 10px;
+}
 
-
+span#logout a {
+	font-weight: normal;
+	font-style: italic;
+}
 
 
 
