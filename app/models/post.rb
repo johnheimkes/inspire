@@ -20,7 +20,7 @@ class Post < ActiveRecord::Base
                     :path => "/:style/:filename"
 
   def self.random
-    return self.all(:limit => 5, :order => "id random()")
+    return self.all(:limit => 5, :order => "id DESC")
   end
   
   private
