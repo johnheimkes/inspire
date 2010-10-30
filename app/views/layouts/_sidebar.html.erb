@@ -7,4 +7,18 @@
       <li data-count="<%= tag["count"] %>" style="width: <%= tag["width"] %>% !important;"><a href="#"><%= tag["name"] %></a></li>
     <% end %>
   </ul>
+  
+  <ul id="recent">
+    <h2><span>Recent</span> Inspiration</h2>
+    <% for post in @random_posts %>
+      <li>
+        <a href="<%= post_url(post) %>">
+          <img class="random_image" src="<%= post.image.url(:thumb) %>" alt="<%= post.title %>" width="50" height="50" />
+          <h4 class="title"><%= post.title %></h4>
+          <h5 class="date"><%= post.created_at.strftime("%B %d, %Y") %></h5>
+        </a>
+      </li>
+    <% end %>
+    
+  </ul>
 </div>

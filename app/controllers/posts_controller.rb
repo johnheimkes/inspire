@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   
-  before_filter :get_tags_count
+  before_filter :get_tags_count, :get_random_posts
   def index
     @posts = Post.paginate(:page => params[:page], :order => 'created_at DESC')
   end
@@ -55,4 +55,6 @@ def get_tags_count
   @tags = Post.tag_counts_on(:tags)
 end
 
-
+def get_random_posts
+  @random_posts = Post.random
+end

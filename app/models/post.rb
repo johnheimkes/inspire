@@ -19,6 +19,10 @@ class Post < ActiveRecord::Base
                                          :bucket => "images.inspirempls.com" },
                     :path => "/:style/:filename"
 
+  def self.random
+    return self.all(:limit => 5, :order => "random()")
+  end
+  
   private
   
     def image_url_provided?

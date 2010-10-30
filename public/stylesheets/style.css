@@ -168,6 +168,10 @@ ul#nav {
 	color: #333;
 }
 
+#nav li.last a {
+	margin-right: 0;
+}
+
 #nav li a:hover, #nav li a.active {
 	color: #9ad0bc;
 }
@@ -286,9 +290,43 @@ a#connect {
 	font-weight: bold;
 }
 
+#sidebar ul {
+	float: left;
+	width: 100%;
+	margin-bottom: 50px;
+}
 #sidebar li {
 	float: left;
 	clear: both;
+}
+
+#recent li a {
+	background: #e0e0e0;
+	text-decoration: none;
+	padding: 5px 5px 5px 10px;
+	display: block;
+	margin-bottom: 5px;
+	margin-left: 11px;
+	width: 225px;
+	float: left;
+}
+
+#recent li a:hover {
+	background: #f0f0f0;
+}
+
+#recent li a .title{
+	color: #4daf8b;
+}
+
+#recent li a .date{
+	color: #222;
+	font-size: 11px;
+}
+
+#recent li img {
+	float: left;
+	margin-right: 15px;
 }
 
 #tags li a {
