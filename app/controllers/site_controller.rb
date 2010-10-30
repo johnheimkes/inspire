@@ -26,5 +26,5 @@ end
 private
 
 def get_random_posts
-  @random = Post.all
+  @random_posts = Post.random
 end
