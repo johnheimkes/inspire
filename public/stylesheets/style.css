@@ -206,7 +206,7 @@ a#connect {
 	border-bottom: 1px solid #e1e1e1;
 	padding-bottom: 25px;
 	margin-bottom: 25px;
-	width: 625px;
+	width: 100%;
 }
 
 .post div.date {
@@ -237,7 +237,7 @@ a#connect {
 }
 
 .post_image {
-	max-width: 550px;
+	max-width: 578px;
 }
 
 .post_content {
@@ -450,6 +450,38 @@ span#logout {
 span#logout a {
 	font-style: italic;
 }
+
+.user_card {
+	margin-left: 74px;
+	border-bottom: 1px solid #e1e1e1;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+	float: left;
+	width: 575px;
+}
+
+.user_card img {
+	float: left;
+	margin-right: 20px;
+}
+
+.user_card .user_info {
+	float: left;
+}
+
+.user_card h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.user_card h5 {
+	
+}
+
+
+
+
+
 
 
 
