@@ -478,6 +478,13 @@ label {
 	display: block;
 }
 
+#notice {
+	float: left;
+	width: 602px;
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+
 
 
 

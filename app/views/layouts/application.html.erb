@@ -30,12 +30,15 @@
           </form>
         </div>
         <ul id="nav">
-          <li><a  id="events" href="#">Events</a></li>
+          <li><a id="events" href="#">Events</a></li>
           <li><a id="about" href="/site/about">About</a></li>
           <li><a id="submit" href="/site/submit">Submit</a></li>
           <li><a id="connect" target="_blank" href="http://twitter.com/inspirempls">Connect</a></li>
         </ul>
       </div>
+      <% if flash[:notice] %>
+        <h2 id="notice" class="caution"><%= flash[:notice] %></h2>
+      <% end %>
       <div id="content">
         <%= yield %>
       </div>
