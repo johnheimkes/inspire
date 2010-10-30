@@ -474,8 +474,8 @@ span#logout a {
 	margin-bottom: 10px;
 }
 
-.user_card h5 {
-	
+label {
+	display: block;
 }
 
 
