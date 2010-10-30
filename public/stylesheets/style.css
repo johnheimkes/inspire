@@ -1,5 +1,7 @@
 /* @override http://looce.com:3000/stylesheets/style.css */
 
+/* @override http://looce.com:3000/stylesheets/style.css */
+
 @import url("reset.css");
 
 body {
@@ -46,6 +48,9 @@ h1 a{
     float: left;
 }
 
+h2 {
+	font-family: Archer, Rockwell, courier, serif;
+}
 #search {
 	float: right;
 	margin-top: -69px;
@@ -366,3 +371,78 @@ a.add_btn:hover {
 	color: #444;
 	background: #abd9c8;
 }
+
+#sign_up h2.title {
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-family: Archer;
+	font-weight: bold;
+}
+
+#sign_up #error_explanation {
+	background: #ffd4d4;
+	padding: 10px;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	border-color: #ff9597;
+	margin-bottom: 10px;
+}
+
+#sign_up #error_explanation h2 {
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	color: #b45d5e;
+}
+#sign_up #error_explanation ul {
+	margin-left: 25px;
+	list-style: disc;
+	margin-top: 9px;
+}
+
+.caution {
+	background: #fff7d4;
+	padding: 10px;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	border-color: #ffcf00;
+	margin-bottom: 10px;
+	font-style: normal;
+	font-size: 14px;
+}
+
+.caution span {
+	font-weight: bold;
+}
+
+#sign_up form {
+	width: 100%;
+}
+#sign_up fieldset {
+	width: 400px;
+}
+
+#sign_up label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 4px;
+	clear: both;
+}
+#sign_up input[type="text"] {
+	width: 97%;
+	height: 25px;
+	border: 1px solid #999;
+	padding: 5px;
+}
+
+#sign_up input[type="submit"] {
+	float: right;
+	margin-top: 10px;
+	width: 75px;
+}
+
+
+
+
+
+

@@ -1,20 +1,28 @@
-<h2>Sign up</h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<div id="sign_up">
+  <h2 class="title">Sign up</h2>
+  
+  <h2 class="caution"><span>Note:</span> Twitter's oAuth api does not provide your email, to continue registering you must provide it.</h2>
+  
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+    <fieldset>
+        
 
-  <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
 
-<% if @user.password_required? %>
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+      <% if @user.password_required? %>
+        <%= f.label :password %>
+        <%= f.password_field :password %></p>
 
-  <p><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></p>
-<% end %>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+      <% end %>
 
-  <p><%= f.submit "Sign up" %></p>
-<% end %>
-
-<%= render :partial => "devise/shared/links" %>
+      <%= f.submit "Sign up" %>
+    </fieldset>
+  <% end %>
+  
+  
+</div>

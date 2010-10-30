@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20101028000514) do
     t.string   "name"
     t.string   "username"
     t.text     "bio"
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
