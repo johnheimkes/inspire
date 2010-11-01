@@ -42,9 +42,7 @@
       <div id="content">
         <%= yield %>
       </div>
-      <% if @tags %>
-        <%= render :partial => "layouts/sidebar", :locals => { :posts => @tags } %>
-      <% end %>
+      <%= render :partial => "layouts/sidebar", :locals => { :posts => @tags } %>
       <div id="footer">
         <p class="copy">&copy; Copyright 2010 &mdash; a <a href="#">MarkupIsArt</a> Project</p>
       </div>
