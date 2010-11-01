@@ -8,6 +8,9 @@ class SiteController < ApplicationController
   def connect
     @post = Post.new
   end
+
+  def event
+  end
   
   def submit
     if current_user

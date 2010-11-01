@@ -8,10 +8,10 @@ Inspirempls::Application.routes.draw do
   resources :user
   
   get "splash/index"
-  get "user/index"
-  get "site/submit"
-  get "site/about"
-  get "site/connect"
+  get "/submit", :to => 'site#submit'
+  get "/about", :to => 'site#about'
+  get "/connect", :to => 'site#connect'
+  get "/event", :to => 'site#event'
 
   match 'tag/:tag', :to => 'tag#show'
 
