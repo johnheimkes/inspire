@@ -12,6 +12,7 @@
     </ul>
   <% end %>
   
+  <% if @random_posts %>
   <ul id="recent">
     <h2><span>Recent</span> Inspiration</h2>
     <% for post in @random_posts %>
@@ -25,4 +26,6 @@
     <% end %>
     
   </ul>
+
+  <% end %>
 </div>

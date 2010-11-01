@@ -17,17 +17,12 @@
       <div id="header">
         <h1><a href="/">InspireMPLS</a></h1>
         <div id="search">
-          <span><%if current_user %> Signed in as <%= link_to current_user.name, user_path(current_user.username) %><span id="logout">(not you? <a href="/auth/sign_out">sign out</a>)</span><% else %><a href="#login_btns" rel="facebox">Sign In</a> <% end %>| </span>
+          <span><%if current_user %> Signed in as <%= link_to current_user.name, user_path(current_user.username) %><span id="logout">(not you? <a href="/auth/sign_out">sign out</a>)</span><% else %><a href="#login_btns" rel="facebox">Sign In</a> <% end %></span>
           
           <span id="login_btns" class="facebook">
             <%= link_to 'Sign in', "/auth/facebook", :class => "facebook_login_btn" %>
             <%= link_to 'Sign in', "/auth/twitter", :class => "twitter_login_btn" %>
           </span>
-            
-          <form action="?s=" method="get">
-            <input name="s" type="text" value="search" />
-            <input type="submit" value="GO" />
-          </form>
         </div>
         <ul id="nav">
           <li><a id="events" href="/event">Event</a></li>

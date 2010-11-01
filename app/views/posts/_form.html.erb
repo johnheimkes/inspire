@@ -1,6 +1,7 @@
 <%= form_for @post, :url => posts_path, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
   <fieldset>
+    <%= f.label :image_url %>
     <%= f.text_field :image_url %><br />
     OR upload an image
     <%= f.file_field :image %>
@@ -10,7 +11,7 @@
 
     <%= f.label :body %>
     <%= f.text_area :body %>
-
+    
     <%= f.submit %>
   </fieldset>
 <% end %>
