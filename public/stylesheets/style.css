@@ -556,11 +556,25 @@ h3.name {
 	font-style: italic;
 	padding-bottom: 3px;
 }
-
-#event_box iframe {
-	margin-left: 30px;
+#event_box iframe {margin-left: 30px;}
+ul#how {
+	position: relative;
+	left: 16px;
+	list-style-type: disc;
 }
-
+ul#how li {padding-bottom: 5px;}
+span#example {font-size: 12px;}
+#about_icon {
+	float: left;
+	margin-top: -20px;
+	height: 300px;
+	padding-right: 20px;
+}
+.about, .about h2 {
+	color: #10222b;
+	font-weight: normal;
+	font-style: normal;
+}
 
 
 
