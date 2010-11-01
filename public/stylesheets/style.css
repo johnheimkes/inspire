@@ -1,6 +1,6 @@
 /* @override http://looce.com:3000/stylesheets/style.css */
 
-/* @override http://looce.com:3000/stylesheets/style.css */
+/* @override http://bigjohn.com:3000/stylesheets/style.css */
 
 @import url("reset.css");
 @import url("brad.css");
@@ -345,7 +345,7 @@ a#connect {
 }
 
 #static_content {
-  width: 450px;
+  width: 560px;
 }
 #static_content h2 {
   font-size: 32px;
@@ -527,6 +527,39 @@ label {
 
 
 
+
+
+#students {
+	width: 680px;
+	margin-top: 40px;
+}
+.person {
+	float: left;
+	width: 283px;
+	padding-bottom: 5px;
+	margin:0 57px 30px 0;
+	border-bottom: 1px solid #abd9c8;
+}
+.person img {
+	padding: 3px 20px 20px 0;
+	float: left;
+}
+h3.name, h3.desc {
+	font-size: 13px;
+	font-style: normal;
+	width: 207px;
+	float: left;
+}
+h3.name {
+	font-size: 14px;
+	font-weight: bold;
+	font-style: italic;
+	padding-bottom: 3px;
+}
+
+#event_box iframe {
+	margin-left: 30px;
+}
 
 
 
