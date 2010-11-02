@@ -1,17 +1,15 @@
 <%= form_for @post, :url => posts_path, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
   <fieldset>
-    <%= f.text_field :image_url %><br />
-    OR upload an image
-    <%= f.file_field :image %>
+    <%= f.text_field :image_url, :value => "Paste image URL or upload an image" %><br/>
+
+    <%= f.file_field :image %><br/>
     
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :value => "Title:" %>
 
-    <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :value => "Description:" %>
 
-    <%= f.submit %>
+    <%= f.submit :value => "SUBMIT"%>
   </fieldset>
 <% end %>
 
