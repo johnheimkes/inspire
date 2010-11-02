@@ -15,7 +15,7 @@ Inspirempls::Application.routes.draw do
 
   match 'tag/:tag', :to => 'tag#show'
 
-  # root :to => "posts#index"
-  root :to => "splash#index"
+  root :to => "posts#index"
+  # root :to => "splash#index"
 
 end
