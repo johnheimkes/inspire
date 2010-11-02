@@ -3,12 +3,13 @@
   <fieldset>
     <%= f.text_field :image_url, :value => "Paste image URL or upload an image" %><br/>
 
+    <%= f.file_field :image %><br/>
     
     <%= f.text_field :title, :value => "Title:" %>
-
 
     <%= f.text_area :body, :value => "Description:" %>
 
     <%= f.submit :value => "SUBMIT"%>
   </fieldset>
 <% end %>
+

@@ -13,13 +13,12 @@ class SiteController < ApplicationController
   end
   
   def submit
-    @post = Post.new
-    # if current_user
-    #   @post = current_user.posts.new
-    # else
-    #   flash[:notice] = "You must login to submit."
-    #   redirect_to posts_path
-    # end
+    if current_user
+      @post = current_user.posts.new
+    else
+      flash[:notice] = "You must login to submit."
+      redirect_to posts_path
+    end
   end
 
   def sign_in
