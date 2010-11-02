@@ -1,29 +1,14 @@
 <%= form_for @post, :url => posts_path, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
   <fieldset>
-<<<<<<< HEAD
     <%= f.text_field :image_url, :value => "Paste image URL or upload an image" %><br/>
 
-    <%= f.file_field :image %><br/>
-=======
-    <%= f.label :image_url %>
-    <%= f.text_field :image_url %><br />
-    OR upload an image
-    <%= f.file_field :image %>
->>>>>>> 61326cf1f21c37882d88af5bbe545dcc1c13e288
     
     <%= f.text_field :title, :value => "Title:" %>
 
-<<<<<<< HEAD
+
     <%= f.text_area :body, :value => "Description:" %>
 
     <%= f.submit :value => "SUBMIT"%>
-=======
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-    
-    <%= f.submit %>
->>>>>>> 61326cf1f21c37882d88af5bbe545dcc1c13e288
   </fieldset>
 <% end %>
-
